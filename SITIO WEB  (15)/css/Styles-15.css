@@ -1,0 +1,156 @@
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+
+    max-width: 1200px;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 70px;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+}
+
+.logo{
+    width: auto;
+    height: 60px;
+}
+
+.toggleMenu{
+    display: none;
+}
+
+.navegation a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+
+    .toggleMenu{
+        display: block;
+        font-size: 50px;
+        cursor: pointer;
+    }
+    
+    .navegation{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        transition: .5s ease;
+        transform: translateX(-100%);
+        background-color: white;
+    }
+
+    .navegation a{
+        padding: 50px;
+        font-size: 40px;
+        transition: .3s ease;
+    }
+
+    .nav-show{
+        transform: translateX(0);
+    }
+
+    .navegation a:hover{
+        color: white;
+        background-color: black;
+    }
+
+}
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+}
+
+.imagen{
+    width: 500px;
+    height: 600px;
+}
+
+.left h1{
+    font-size: 64px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.left h2{
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.left p{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.left a{
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .imagen{
+        width: 300px;
+        height: 350px;
+    }
+    
+    .hero-section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .left{
+        text-align: center;
+    }
+
+    .left h1{
+        font-size: 40px;
+    }
+
+    .left h2{
+        font-size: 35px;
+    }
+
+    .left p{
+        font-size: 20px;
+    }
+
+}

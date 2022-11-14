@@ -1,0 +1,170 @@
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+section{
+    max-width: 1200px;
+    position: sticky;
+    margin: 0 auto;
+}
+
+.Logo{
+    width: auto;
+    height: 65px;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    height: 70px;
+    z-index: 999;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggleBtn{
+    display: none;
+}
+
+.navegation a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .toggleBtn{
+        display: block;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    .navegation{
+        position: absolute;    
+        top: 70px;
+        left: 0px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        transition: .5s ease;
+        transform: scale3d(0,0,0);
+
+        /* background-color: white; */
+    }
+    
+
+    .nav-show{
+        transform: scale3d(1,1,1);
+    }
+
+    .navegation a{
+        padding: 40px;
+        font-size: 50px;
+        transition: .4s ease;
+    }
+
+    .navegation a:hover{
+        color: white;
+        background-color: black;
+    }
+
+}
+
+/* Hero section */
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 7px 20px;
+}
+
+.imagen{
+    width: auto;
+    height: 500px;
+}
+
+.left h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.left h2{
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.left p{
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.left a{
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+
+    transition: .4s ease;
+}
+
+.left a:hover{
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .hero-section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imagen{
+        width: auto;
+        height: 340px;
+    }
+
+    .left{
+        text-align: center;
+    }
+
+    .left h1{
+        font-size: 30px;
+    }
+
+    .left h2{
+        font-size: 25px;
+    }
+
+    .left p{
+        font-size: 16px;
+    }
+
+}

@@ -1,0 +1,187 @@
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+
+
+/* header */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 0 10%;
+}
+
+.logo{
+    width: auto;
+    height: 68px;
+    opacity: 1;
+}
+
+.navegation{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+
+
+    background-image: url(../assets/Fondo.jpg);
+    background-size: cover;
+    background-position: center center;
+
+
+    transition: .5s ease;
+    transform: translateY(-120%);
+}
+
+.navegation a{
+    padding: 50px;
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.nav-show{
+    transform: translateY(0);
+}
+
+.toggleBtn{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+.navegation a:hover{
+    color: white;
+    background-color: black;
+}
+
+
+
+/* hero section */
+
+
+.hero-Img{
+    background-image: url(../assets/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5;
+
+    height: 100vh;
+}
+
+.hero-section{
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 70px;
+}
+
+.imagen{
+    width: 400px;
+    height: 450px;
+}
+
+.left h1{
+    font-size: 54px;
+    margin-bottom: 5px;
+}
+
+.left h2{
+    font-size: 38px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.left p{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.left a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 8px;
+    transition: .4s ease;
+}
+
+.left a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo{
+        width: auto;
+        height: 60px;
+    }
+
+    .toggleBtn{
+        font-size: 40px;
+    }
+    
+    .hero-section{
+        padding: 0 5%;
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .left{
+        text-align: center;
+    }
+
+    .imagen{
+        width: 250px;
+        height: 320px;
+    }
+
+    .left h1{
+        font-size: 40px;
+    }
+
+    .left h2{
+        font-size: 28px;
+    }
+
+    .left p{
+        font-size: 16px;
+    }
+
+}
+

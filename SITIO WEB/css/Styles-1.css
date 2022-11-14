@@ -1,0 +1,236 @@
+body{
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+.header{
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo{
+    width: auto;
+    height: 70px;
+}
+
+i{
+    display: none;
+}
+
+button{
+    display: none;
+}
+
+.menu-btn{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.menu a{        
+    font-size: 1.3rem;
+    padding: 0 5px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    height: 115px;
+}
+
+
+.container{
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heroSection{
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10%;
+}
+
+.imagen{
+    width: auto;
+    height: 600px;
+}
+
+.left h1{
+    margin: 0;
+    margin-bottom: 1px;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.left h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.left a {
+    margin: 0 40%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.left a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+
+@media screen and (max-width: 930px) {
+
+    .menu a{
+        font-size: 1rem;
+    }
+
+    .left h1{
+        font-size: 2.5rem;
+
+    }
+
+    .left h2{
+        font-size: 2rem;
+    }
+
+    .left a{
+        font-size: 1.1rem;
+    }
+
+    .imagen{
+        margin-top: 30px;
+        width: auto;
+        height: 570px;
+    }
+    
+}
+
+@media screen and (max-width: 780px) {
+
+    button{
+        display: block;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    .menu{
+        position: fixed;
+        left: 0;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(0,-100%);
+        width: 100%;
+    }
+    
+    .menu.is-active{
+            opacity: 1;
+            pointer-events: auto;
+    }
+
+    .menu a{
+        padding: .1rem;
+        font-size: 3rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .menu a:hover{
+        color: white;
+        background-color: black;
+        transition-duration: .4s;
+    }
+    
+    .none{
+        display: none;
+    }
+
+    .heroSection{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imagen{
+        margin-top: 10px;
+        width: auto;
+        height: 400px;
+    }
+
+    .left h1{
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .left h2{
+        margin-top: 10px;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .left a{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    .logo{
+        width: auto;
+        height: 50px;
+    }
+
+    button{
+        display: block;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .menu{
+        top: 50px;
+    }
+
+    .menu a{
+        padding: 1rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imagen{
+        margin-top: 30px;
+        width: auto;
+        height: 350px;
+    }
+
+}
