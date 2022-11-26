@@ -28,14 +28,3 @@ html {
 figcaption{
     font-size: 1.5rem;
 }
-
-a{
-    font-size: 50px;
-    padding: 40px;
-    transition: .5s ease;
-}
-
-a:hover{
-    background-color: black;
-    color: white;
-}
